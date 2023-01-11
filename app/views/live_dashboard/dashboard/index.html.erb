@@ -1,0 +1,32 @@
+<h1 class="margin">Rails Live Dashboard</h1>
+<div class="grid">
+
+	<div class="s12 m6 l4">
+		<article>
+			<h6>Mode</h6>
+			<%= Rails.env %>
+		</article>
+	</div>
+
+	<div class="s12 m6 l4">
+		<article>
+			<h6>Version</h6>
+			<%= Rails.version %>
+		</article>
+	</div>
+
+	<div class="s12 m6 l4">
+		<article>
+			<h6>Cable Connections</h6>
+			<%= ActionCable.server.connections.length %>
+		</article>
+	</div>
+
+	<div class="s12">
+		<article>
+			<h6>Environment</h6>
+			<%= Rails::Info.properties %>
+		</article>
+	</div>
+
+</div>
