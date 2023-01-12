@@ -10,7 +10,7 @@
 
 	<div class="s12 m6 l4">
 		<article>
-			<h6>Version</h6>
+			<h6>Rails Version</h6>
 			<%= Rails.version %>
 		</article>
 	</div>
@@ -19,6 +19,21 @@
 		<article>
 			<h6>Cable Connections</h6>
 			<%= ActionCable.server.connections.length %>
+		</article>
+	</div>
+
+	<div class="s12 m6 l4">
+		<article>
+			<h6>Database</h6>
+			<%= Rails.configuration.database_configuration[Rails.env] %>
+			Adapter: <%= ActiveRecord::Base.connection_db_config.adapter %> - Pool: <%= ActiveRecord::Base.connection_db_config.pool %>
+		</article>
+	</div>
+
+	<div class="s12 m6 l4">
+		<article>
+			<h6>Ruby Version</h6>
+			<%= "#{RUBY_VERSION} - #{RUBY_PATCHLEVEL} - #{RUBY_PLATFORM} - #{RUBY_RELEASE_DATE}"%>
 		</article>
 	</div>
 
